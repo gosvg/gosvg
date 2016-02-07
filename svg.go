@@ -626,28 +626,28 @@ func (v vCmd) strings() []string {
 
 // CCurve represents a cubic Bezier curve.
 type CCurve struct {
-	x1 float64
-	y1 float64
-	x2 float64
-	y2 float64
-	x  float64
-	y  float64
+	X1 float64
+	Y1 float64
+	X2 float64
+	Y2 float64
+	X  float64
+	Y  float64
 }
 
 // SCurve represents a shorthand cubic Bezier curve.
 type SCurve struct {
-	x2 float64
-	y2 float64
-	x  float64
-	y  float64
+	X2 float64
+	Y2 float64
+	X  float64
+	Y  float64
 }
 
 // QCurve represents a quadratic Bezier curve.
 type QCurve struct {
-	x1 float64
-	y1 float64
-	x  float64
-	y  float64
+	X1 float64
+	Y1 float64
+	X  float64
+	Y  float64
 }
 
 type cCmd struct {
@@ -660,12 +660,12 @@ func (c cCmd) strings() []string {
 
 	for _, cv := range c.cvs {
 		out = append(out,
-			fmt.Sprintf("%g", cv.x1),
-			fmt.Sprintf("%g", cv.y1),
-			fmt.Sprintf("%g", cv.x2),
-			fmt.Sprintf("%g", cv.y2),
-			fmt.Sprintf("%g", cv.x),
-			fmt.Sprintf("%g", cv.y))
+			fmt.Sprintf("%g", cv.X1),
+			fmt.Sprintf("%g", cv.Y1),
+			fmt.Sprintf("%g", cv.X2),
+			fmt.Sprintf("%g", cv.Y2),
+			fmt.Sprintf("%g", cv.X),
+			fmt.Sprintf("%g", cv.Y))
 	}
 
 	return out
@@ -681,10 +681,10 @@ func (c sCmd) strings() []string {
 
 	for _, cv := range c.cvs {
 		out = append(out,
-			fmt.Sprintf("%g", cv.x2),
-			fmt.Sprintf("%g", cv.y2),
-			fmt.Sprintf("%g", cv.x),
-			fmt.Sprintf("%g", cv.y))
+			fmt.Sprintf("%g", cv.X2),
+			fmt.Sprintf("%g", cv.Y2),
+			fmt.Sprintf("%g", cv.X),
+			fmt.Sprintf("%g", cv.Y))
 	}
 
 	return out
@@ -700,10 +700,10 @@ func (c qCmd) strings() []string {
 
 	for _, cv := range c.cvs {
 		out = append(out,
-			fmt.Sprintf("%g", cv.x1),
-			fmt.Sprintf("%g", cv.y1),
-			fmt.Sprintf("%g", cv.x),
-			fmt.Sprintf("%g", cv.y))
+			fmt.Sprintf("%g", cv.X1),
+			fmt.Sprintf("%g", cv.Y1),
+			fmt.Sprintf("%g", cv.X),
+			fmt.Sprintf("%g", cv.Y))
 	}
 
 	return out
