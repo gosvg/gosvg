@@ -1,13 +1,11 @@
 package gosvg
 
 import (
-	"encoding/xml"
 	"fmt"
 	"io"
 	"strings"
 )
 
-type renderFunc func(*xml.Encoder) error
 type renderable interface {
 	render(e io.Writer) error
 }
