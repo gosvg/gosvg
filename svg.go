@@ -286,7 +286,7 @@ func (c *container) Path() *Path {
 }
 
 // Group generates a new group within the given container.
-func (c *SVG) Group() *Group {
+func (c *container) Group() *Group {
 	g := &Group{container: container{name: "g"}}
 	c.contents = append(c.contents, g)
 
